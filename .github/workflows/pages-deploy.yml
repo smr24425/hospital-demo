@@ -35,7 +35,7 @@ jobs:
           docker run -d -p 3000:3000  smr24427/nextjs-blog:hospital-demo
 
       - name: show Next.js app
-        run: docker exec $(docker ps -q -f ancestor=smr24427/nextjs-blog:hospital-demo) npm run install
+        run: docker exec $(docker ps -q -f ancestor=smr24427/nextjs-blog:hospital-demo) npm install
       - name: Build Next.js app
         run: docker exec $(docker ps -q -f ancestor=smr24427/nextjs-blog:hospital-demo) npm run build
 
